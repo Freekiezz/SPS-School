@@ -1,51 +1,63 @@
-    body {
-        background-color: #de006b;
-    }
+body {
+    background-color: #de006b;
+  }
 
+  .heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 5vmin;
+    background-color: #00305c;
+    border: 10px outset #6F1864;
+    border-radius: 50px;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+  }
 
-    .heading {
-        text-align: center;
-        font-size: 5vmin;
-        background-color: #00305c;
-        border: 10px outset #6F1864;
-        border-radius: 50px;
-        color: rgb(255, 255, 255);
-    }
+  .title {
+    flex-grow: 1;
+    position: relative; left: 10%;
+    
+  }
 
+  button {
+    margin: 15px;
+    border: 2px outset #6F1864;
+    background-color: #00305c;
+    width: 15vmax;
+    height: 20vmax;
+    font-size: 20px;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+  }
 
-    button {
-        margin: 15px;
-        border: 2px outset #6F1864;
-        background-color: #00305c;
-        width: 15vmax;
-        height: 20vmax;
-        font-size: 20px;
-        color: white;
-        border-radius: 20px;
-        text-decoration: none;
-    }
+  .buttons {
+    width: 75%;
+    margin: auto;
+    text-align: center;
+    margin-top: 30px;
+  }
 
-    .buttons {
-        width: 75%;
-        margin: auto;
-        text-align: center;
-        margin-top: 30px;
-    }
+  .img-with-text {
+    text-align: justify;
+    width: [width of img];
+  }
 
-    .img-with-text {
-        text-align: justify;
-        width: [width of img];
-    }
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 5vmin;
+    background-color: #00305c;
+    border: 10px outset #6F1864;
+    border-radius: 50px;
+    color: rgb(255, 255, 255);
+    height: 100px; /* Set a fixed height for the footer */
+  }
 
-    .footer {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        font-size: 5vmin;
-        background-color: #00305c;
-        border: 10px outset #6F1864;
-        border-radius: 50px;
-        color: rgb(255, 255, 255);
-        height: 100px; /* Set a fixed height for the footer */
-    }
+  .streak-counter {
+    float: right;
+  }
