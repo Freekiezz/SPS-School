@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Steen Papier Schaar</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!-- titel -->
+        <div class="heading">
+            <h1>Steen Papier Schaar</h1>
+        </div>
+
+        <!-- knoppen om het spel te spelen -->
+        <div class="buttons">
+            <button class="button" onclick="playGame('rock')">Steen</button>
+            <button class="button" onclick="playGame('paper')">Papier</button>
+            <button class="button" onclick="playGame('scissors')">Schaar</button>
+        </div>
+
+        <!-- laat het resultaat zien -->
+        <div class="footer" id="result"></div>
+
+        <script>
+            function playGame(userChoice) {                                      //gebruik playGame om het spel te starten, pakt de keuze can de speler in een array -->
+                var choices = ["rock", "paper", "scissors"];                     //een array word gemaakt van de mogelijke opties -->
+                var randomIndex = Math.floor(Math.random() * choices.length);    //de randomindex word gerengeerd met behulp van Math.floor(Math.random() * choices.length) dit pakt een nummer van 0 tot de lengte van de array choises -->
+                var computerChoice = choices[randomIndex];                       // computors choice word gebruikt om de keuze van de computor op te slaan
+
+                var result = determineResult(userChoice, computerChoice);        // determaineresult pakt de spelers en de computors keuze en kijkt wie de winnaar is dit slaat hij op in  "result"
+
+                document.getElementById("result").innerHTML = result;            // dit updated te html om het resultaat te laten zien van het spel
+            }
+
+                
+            
+            function determineResult(userChoice, computerChoice) {               // determineResult pakt weer bijde inputs en kijkt naar het resultaat
+                if (userChoice === computerChoice) {                             // hier word een if statment gebrikt om te kijken wie wint
+                    return "Het is gelijk spel!!!";                              // in deze lijn en de lijn erboven word gekeken of de spler en computer het zelfde hebben gekozen, als dit zo is geef als result het is gelijk spel
+                } else if (                                                      // in deze volgende 3 lijnen word de else if statement gebruikt om alle mogelijkheden af te gaan waar de speler wint, als dit zo is geef als result jij hebt gewonnen
+                    (userChoice === "rock" && computerChoice === "scissors") ||
+                    (userChoice === "paper" && computerChoice === "rock") ||
+                    (userChoice === "scissors" && computerChoice === "paper")
+                ) {
+                    return "Jij hebt gewonnen!!!";
+                } else {                                                         // hier word de else statment gebruikt, als geen van de anderen statments teug komen als "True" geef de result Jij hebt verloren
+                    return "Jij hebt veroren!";
+                }
+            }
+        </script>
+    </body>
+</html>
