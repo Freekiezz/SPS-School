@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steen Papier Schaar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- titel -->
+    <div class="heading">
+        <h1 class="title">Steen Papier Schaar</h1>
+        <div id="streak" class="streak-counter">Winning Streak: 0</div>
+    </div>
+
+    <!-- knoppen om het spel te spelen -->
+    <div class="buttons">
+        <button class="button" onclick="playGame('rock')">Steen</button>
+        <button class="button" onclick="playGame('paper')">Papier</button>
+        <button class="button" onclick="playGame('scissors')">Schaar</button>
+    </div>
+
+    <!-- laat het resultaat zien -->
+    <div class="footer" id="result"></div>
+
+    <script src="model.js"></script>
+    <script src="view.js"></script>
+    <script src="controller.js"></script>
+</body>
+</html>
